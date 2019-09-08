@@ -1,10 +1,10 @@
-FROM node:10.11
+FROM node:12
 
-WORKDIR /usr/src
+WORKDIR /app
 
-COPY package.json /usr/src/package.json
+COPY package.json /app/package.json
 RUN yarn install
 
-COPY . /usr/src/
+COPY . /app
 
 CMD ["yarn", "start"]

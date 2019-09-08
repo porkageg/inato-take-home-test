@@ -6,7 +6,8 @@ const drugs = [
   new Drug("Doliprane", 20, 30),
   new Drug("Herbal Tea", 10, 5),
   new Drug("Fervex", 5, 40),
-  new Drug("Magic Pill", 15, 40)
+  new Drug("Magic Pill", 15, 40),
+  new Drug("Dafalgan", 10, 19)
 ];
 const trial = new Pharmacy(drugs);
 
@@ -16,8 +17,10 @@ for (let elapsedDays = 0; elapsedDays < 30; elapsedDays++) {
   log.push(JSON.stringify(trial.updateBenefitValue()));
 }
 
+console.log(log)
+
 /* eslint-disable no-console */
-fs.writeFile("output.txt", log, err => {
+fs.writeFile("/app/res/output.txt", log, err => {
   if (err) {
     console.log("error");
   } else {

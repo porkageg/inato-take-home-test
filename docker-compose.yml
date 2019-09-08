@@ -3,4 +3,5 @@ services:
   inato:
     build: .
     volumes:
-      - ".:/usr/src"
+      - "./src:/app/src"
+      - "./res:/app/res"
