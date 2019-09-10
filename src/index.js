@@ -17,10 +17,8 @@ for (let elapsedDays = 0; elapsedDays < 30; elapsedDays++) {
   log.push(JSON.stringify(trial.updateBenefitValue()));
 }
 
-console.log(log)
-
 /* eslint-disable no-console */
-fs.writeFile("/app/res/output.txt", log, err => {
+fs.writeFile(process.env.SAVE_FILE || "res/output.txt", log, err => {
   if (err) {
     console.log("error");
   } else {

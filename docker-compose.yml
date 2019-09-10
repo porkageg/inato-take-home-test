@@ -5,3 +5,5 @@ services:
     volumes:
       - "./src:/app/src"
       - "./res:/app/res"
+    environment: 
+      - SAVE_FILE=/app/res/output.txt
